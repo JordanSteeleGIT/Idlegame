@@ -1,16 +1,16 @@
 import React, { FC } from "react";
 import IncreaseClickValuePanel from "../IncreaseClickValuePanel/IncreaseClickValuePanel";
-import { IClickInfo } from "../../App";
-import { IIdleInfo } from "../../App";
+import { IUpgradeInfo } from "../../App";
+
 import { RedButton, ClickerScreen } from "./../Styles/ClickerPage.styled";
 
 interface IClickerPageProps {
   counter: number;
   setCounter: React.Dispatch<React.SetStateAction<number>>;
-  clickInfo: IClickInfo;
-  idleInfo: IIdleInfo;
-  setIdleInfo: React.Dispatch<React.SetStateAction<IIdleInfo>>;
-  setClickInfo: React.Dispatch<React.SetStateAction<IClickInfo>>;
+  clickInfo: IUpgradeInfo;
+  idleInfo: IUpgradeInfo;
+  setIdleInfo: React.Dispatch<React.SetStateAction<IUpgradeInfo>>;
+  setClickInfo: React.Dispatch<React.SetStateAction<IUpgradeInfo>>;
 }
 const Clickerpage: FC<IClickerPageProps> = ({
   counter,

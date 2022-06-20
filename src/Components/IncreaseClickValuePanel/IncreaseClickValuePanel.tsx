@@ -27,9 +27,9 @@ const IncreaseClickValuePanel: FC<IIncreaseValuesProps> = ({
   const handleIncreaseClick = (): void => {
     if (counter >= clickInfo.cost) {
       setClickInfo((prev) => ({
-        ...prev,
-        damage: prev.damage + 1,
+        damage: Math.round(prev.damage + 1 * prev.amount * 0.5),
         amount: prev.amount + 1,
+        cost: Math.round(prev.damage + 2 * (prev.amount * 3)),
       }));
 
       setCounter(counter - clickInfo.cost);
@@ -38,9 +38,9 @@ const IncreaseClickValuePanel: FC<IIncreaseValuesProps> = ({
   const handleIncreaseIdle = (): void => {
     if (counter >= idleInfo.cost) {
       setIdleInfo((prev) => ({
-        ...prev,
-        damage: prev.damage + 1,
+        damage: Math.round(prev.damage + 1 * prev.amount * 0.5),
         amount: prev.amount + 1,
+        cost: Math.round(prev.damage + 2 * (prev.amount * 3)),
       }));
 
       setCounter(counter - idleInfo.cost);
